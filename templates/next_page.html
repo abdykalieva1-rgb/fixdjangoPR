@@ -1,10 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>next_page</title>
+    <link rel="stylesheet" href="{% static 'next_page.css' %}">
 </head>
 <body>
-$END$
+
+<div class="card-wrapper">
+
+{% for car in cars %}
+<a href="{% url 'car_dateil' car.id %}" class="card-link">
+  <div class="card-container">
+    <div class="card">
+
+      {% if car.image %}
+        <img src="{{ car.image.url }}" alt="{{ car.name }}" class="card-img">
+      {% endif %}
+
+      <div class="card-info">
+        <div class="card-about">
+          <div class="card-time">{{ car.year }}</div>
+        </div>
+        <h1 class="card-title">{{ car.name }}</h1>
+        <div class="card-creator">{{ car.color }}</div>
+      </div>
+
+    </div>
+  </div>
+</a>
+{% endfor %}
+
+</div>
+
 </body>
 </html>

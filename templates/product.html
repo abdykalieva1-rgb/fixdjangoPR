@@ -1,15 +1,47 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>product</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-<body>
-<h1>header</h1>
-<h2>menu</h2>
-<h3>hero</h3>
-<h4>footer</h4>
-</body>
-</html>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <article class="blog-card">
+        <div class="blog-card__background">
+          <div class="card__background--wrapper">
+            <div class="card__background--main" style="background-image: url('http://demo.yolotheme.com/html/motor/images/demo/demo_131.jpg');">
+              <div class="card__background--layer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card__head">
+          <span class="date__box">
+            <span class="date__day">11</span>
+            <span class="date__month">JAN</span>
+          </span>
+        </div>
+        <div class="blog-card__info">
+          <h5>Главная страница</h5>
+            <p>Добро пожаловать в мир автомобилей!</p>
+          <p>Наш сайт — это актуальная и достоверная информация о легковых и коммерческих автомобилях. Здесь вы найдёте обзоры, технические характеристики, сравнения моделей, советы по выбору и эксплуатации авто.</p>
+
+
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<section class="detail-page">
+  <div class="container mt-5">
+
+  </div>
+</section>
+
+
+<a href="{% url 'next_to_page' %}">
+    <button class="button type1">
+        <span class="btn-txt">ДАЛЕЕ</span>
+    </button>
+</a>
